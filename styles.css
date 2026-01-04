@@ -5,20 +5,22 @@
     box-sizing: border-box;
 }
 
-/* Переменные цветов для трейдинга */
+/* Переменные цветов в стиле Libertex */
 :root {
-    --bg-primary: #0a0e27;
-    --bg-secondary: #141b3a;
-    --bg-card: #1a2347;
-    --text-primary: #e8eaed;
-    --text-secondary: #a8b3cf;
-    --accent-green: #00d4aa;
-    --accent-green-dark: #00b894;
-    --accent-blue: #4c6fff;
-    --gradient-primary: linear-gradient(135deg, #00d4aa 0%, #00b894 100%);
-    --gradient-hover: linear-gradient(135deg, #00b894 0%, #009978 100%);
-    --shadow: 0 10px 40px rgba(0, 212, 170, 0.1);
-    --shadow-hover: 0 15px 50px rgba(0, 212, 170, 0.2);
+    --bg-primary: #f5f5f5;
+    --bg-secondary: #ffffff;
+    --bg-card: #ffffff;
+    --bg-dark: #1a1a1a;
+    --text-primary: #1a1a1a;
+    --text-secondary: #666666;
+    --text-light: #ffffff;
+    --accent-orange: #FF6B4A;
+    --accent-orange-dark: #e5543a;
+    --accent-red: #FF3333;
+    --gradient-primary: linear-gradient(135deg, #FF6B4A 0%, #FF8A6F 100%);
+    --gradient-hover: linear-gradient(135deg, #e5543a 0%, #FF6B4A 100%);
+    --shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    --shadow-hover: 0 8px 30px rgba(255, 107, 74, 0.25);
 }
 
 /* Базовые стили */
@@ -36,7 +38,7 @@ body {
 header {
     padding: 1.5rem 1rem;
     background: var(--bg-secondary);
-    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.08);
 }
 
 header nav {
@@ -47,10 +49,7 @@ header nav {
 header h1 {
     font-size: 1.5rem;
     font-weight: 700;
-    background: var(--gradient-primary);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
+    color: var(--accent-orange);
 }
 
 /* Main */
@@ -78,10 +77,11 @@ main {
     font-weight: 800;
     margin-bottom: 1rem;
     line-height: 1.2;
-    background: linear-gradient(135deg, var(--text-primary) 0%, var(--accent-green) 100%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
+    color: var(--text-primary);
+}
+
+.hero h2::first-line {
+    color: var(--accent-red);
 }
 
 .hero p {
@@ -100,7 +100,7 @@ main {
     box-shadow: var(--shadow);
     width: 100%;
     max-width: 500px;
-    border: 1px solid rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(0, 0, 0, 0.08);
     animation: fadeInUp 0.8s ease-out 0.2s both;
 }
 
@@ -129,7 +129,7 @@ label {
 input[type="email"] {
     padding: 1rem 1.25rem;
     background: var(--bg-secondary);
-    border: 2px solid rgba(255, 255, 255, 0.1);
+    border: 2px solid #e0e0e0;
     border-radius: 12px;
     font-size: 1rem;
     color: var(--text-primary);
@@ -143,8 +143,8 @@ input[type="email"]::placeholder {
 }
 
 input[type="email"]:focus {
-    border-color: var(--accent-green);
-    box-shadow: 0 0 0 4px rgba(0, 212, 170, 0.1);
+    border-color: var(--accent-orange);
+    box-shadow: 0 0 0 4px rgba(255, 107, 74, 0.1);
     transform: translateY(-2px);
 }
 
@@ -178,10 +178,10 @@ button[type="submit"]:active {
 footer {
     padding: 2rem 1rem;
     text-align: center;
-    color: var(--text-secondary);
+    color: var(--text-light);
     font-size: 0.875rem;
-    background: var(--bg-secondary);
-    border-top: 1px solid rgba(255, 255, 255, 0.05);
+    background: var(--bg-dark);
+    border-top: none;
 }
 
 /* Animations */
