@@ -107,13 +107,13 @@ main {
 }
 
 .benefit-card {
-    background: #2a2a2a;
+    background: #e8e8e8;
     padding: 2rem;
     border-radius: 16px;
     text-align: center;
     transition: all 0.3s ease;
     cursor: pointer;
-    border: 1px solid rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(0, 0, 0, 0.1);
 }
 
 .benefit-card:hover {
@@ -131,7 +131,7 @@ main {
 .benefit-card h4 {
     font-size: 1.125rem;
     font-weight: 600;
-    color: var(--text-light);
+    color: var(--text-primary);
     line-height: 1.4;
 }
 
