@@ -92,6 +92,49 @@ main {
     line-height: 1.8;
 }
 
+/* Benefits Section */
+.benefits {
+    width: 100%;
+    margin-bottom: 3rem;
+    animation: fadeInUp 0.8s ease-out 0.1s both;
+}
+
+.benefits-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+    width: 100%;
+}
+
+.benefit-card {
+    background: var(--bg-dark);
+    padding: 2rem;
+    border-radius: 16px;
+    text-align: center;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.benefit-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 40px rgba(255, 107, 74, 0.3);
+    border-color: var(--accent-orange);
+}
+
+.benefit-emoji {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    line-height: 1;
+}
+
+.benefit-card h4 {
+    font-size: 1.125rem;
+    font-weight: 600;
+    color: var(--text-light);
+    line-height: 1.4;
+}
+
 /* Subscription Section */
 .subscription {
     background: var(--bg-card);
@@ -222,6 +265,11 @@ footer {
 
     .hero p {
         font-size: 1.25rem;
+    }
+
+    .benefits-grid {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 2rem;
     }
 
     .subscription {
