@@ -217,6 +217,41 @@ button[type="submit"]:active {
     transform: translateY(0);
 }
 
+/* Form Messages */
+.form-message {
+    display: none;
+    padding: 1rem;
+    border-radius: 8px;
+    font-size: 0.875rem;
+    font-weight: 600;
+    text-align: center;
+    margin-top: 1rem;
+    animation: slideIn 0.3s ease-out;
+}
+
+.form-message.error {
+    background-color: #ffe6e6;
+    color: #cc0000;
+    border: 1px solid #ffcccc;
+}
+
+.form-message.success {
+    background-color: #e6f7e6;
+    color: #006600;
+    border: 1px solid #b3e6b3;
+}
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
 /* Footer */
 footer {
     padding: 2rem 1rem;
