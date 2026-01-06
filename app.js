@@ -36,7 +36,7 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 
     // Обработка отправки формы
-    form.addEventListener('submit', function(e) {
+    form.addEventListener('submit', async function(e) {
         e.preventDefault();
 
         const emailValue = emailInput.value.trim();
@@ -55,11 +55,40 @@ document.addEventListener('DOMContentLoaded', function() {
             return;
         }
 
-        // Если валидация прошла успешно
-        showMessage('Спасибо! Проверьте ваш email для подтверждения подписки', 'success');
+        // Блокируем кнопку во время отправки
+        submitButton.disabled = true;
+        submitButton.textContent = 'Отправка...';
 
-        // Очистка формы
-        emailInput.value = '';
-        emailInput.blur();
+        try {
+            // Отправляем данные на сервер
+            const response = await fetch('http://localhost:3000/subscribe', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({ email: emailValue })
+            });
+
+            const data = await response.json();
+
+            if (response.ok) {
+                // Успешная подписка
+                showMessage(data.message || 'Спасибо! Проверьте ваш email для подтверждения подписки', 'success');
+
+                // Очистка формы
+                emailInput.value = '';
+                emailInput.blur();
+            } else {
+                // Ошибка от сервера
+                showMessage(data.message || 'Произошла ошибка. Попробуйте позже', 'error');
+            }
+        } catch (error) {
+            console.error('Ошибка при отправке:', error);
+            showMessage('Ошибка подключения к серверу. Проверьте, что сервер запущен', 'error');
+        } finally {
+            // Разблокируем кнопку
+            submitButton.disabled = false;
+            submitButton.textContent = 'Подписаться';
+        }
     });
 });
