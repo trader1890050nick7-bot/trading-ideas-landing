@@ -72,12 +72,10 @@ document.addEventListener('DOMContentLoaded', function() {
             const data = await response.json();
 
             if (response.ok) {
-                // Успешная подписка
-                showMessage(data.message || 'Спасибо! Проверьте ваш email для подтверждения подписки', 'success');
-
-                // Очистка формы
-                emailInput.value = '';
-                emailInput.blur();
+                // Успешная подписка - редирект на страницу благодарности
+                setTimeout(() => {
+                    window.location.href = 'thank-you.html';
+                }, 500);
             } else {
                 // Ошибка от сервера
                 showMessage(data.message || 'Произошла ошибка. Попробуйте позже', 'error');

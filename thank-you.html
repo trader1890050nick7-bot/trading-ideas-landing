@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Спасибо за подписку на торговые идеи">
+    <title>Спасибо за подписку - Trading Ideas</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .thank-you-container {
+            text-align: center;
+            max-width: 600px;
+            margin: 0 auto;
+            animation: fadeInUp 0.8s ease-out;
+        }
+
+        .thank-you-icon {
+            font-size: 5rem;
+            margin-bottom: 1.5rem;
+            animation: bounce 1s ease-out;
+        }
+
+        .thank-you-container h2 {
+            font-size: 2.5rem;
+            font-weight: 800;
+            margin-bottom: 1rem;
+            color: var(--text-primary);
+        }
+
+        .thank-you-container p {
+            font-size: 1.25rem;
+            color: var(--text-secondary);
+            margin-bottom: 2rem;
+            line-height: 1.8;
+        }
+
+        .back-button {
+            display: inline-block;
+            padding: 1rem 2.5rem;
+            background: var(--gradient-primary);
+            border: none;
+            border-radius: 12px;
+            font-size: 1.125rem;
+            font-weight: 700;
+            color: white;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: var(--shadow);
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            text-decoration: none;
+        }
+
+        .back-button:hover {
+            background: var(--gradient-hover);
+            box-shadow: var(--shadow-hover);
+            transform: translateY(-2px);
+        }
+
+        .back-button:active {
+            transform: translateY(0);
+        }
+
+        .check-icon {
+            width: 80px;
+            height: 80px;
+            background: #4CAF50;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 2rem;
+            animation: scaleIn 0.5s ease-out;
+        }
+
+        .check-icon::after {
+            content: '✓';
+            font-size: 3rem;
+            color: white;
+            font-weight: bold;
+        }
+
+        @keyframes bounce {
+            0%, 100% {
+                transform: translateY(0);
+            }
+            50% {
+                transform: translateY(-20px);
+            }
+        }
+
+        @keyframes scaleIn {
+            0% {
+                transform: scale(0);
+                opacity: 0;
+            }
+            50% {
+                transform: scale(1.1);
+            }
+            100% {
+                transform: scale(1);
+                opacity: 1;
+            }
+        }
+
+        @media (min-width: 768px) {
+            .thank-you-container h2 {
+                font-size: 3rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <h1>Trading Ideas</h1>
+        </nav>
+    </header>
+
+    <main>
+        <div class="thank-you-container">
+            <div class="check-icon"></div>
+
+            <h2>Спасибо за подписку!</h2>
+
+            <p>
+                Мы отправили письмо с подтверждением на ваш email адрес.
+                Пожалуйста, проверьте вашу почту и подтвердите подписку,
+                чтобы начать получать еженедельные торговые идеи.
+            </p>
+
+            <a href="index.html" class="back-button">Вернуться на главную</a>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Trading Ideas. Все права защищены.</p>
+    </footer>
+</body>
+</html>
