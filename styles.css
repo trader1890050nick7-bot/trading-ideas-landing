@@ -135,6 +135,160 @@ main {
     line-height: 1.4;
 }
 
+/* Examples Section */
+.examples {
+    width: 100%;
+    margin-bottom: 3rem;
+    animation: fadeInUp 0.8s ease-out 0.2s both;
+}
+
+.examples h3 {
+    font-size: 2rem;
+    font-weight: 800;
+    text-align: center;
+    margin-bottom: 2.5rem;
+    color: var(--text-primary);
+}
+
+.examples-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    width: 100%;
+    margin-bottom: 1.5rem;
+}
+
+.example-card {
+    background: var(--bg-card);
+    border-radius: 16px;
+    padding: 2rem;
+    box-shadow: var(--shadow);
+    border: 1px solid rgba(0, 0, 0, 0.08);
+    transition: all 0.3s ease;
+}
+
+.example-card:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-hover);
+}
+
+.example-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.5rem;
+    padding-bottom: 1rem;
+    border-bottom: 2px solid #f0f0f0;
+}
+
+.asset-name {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+}
+
+.asset-icon {
+    font-size: 2rem;
+    line-height: 1;
+}
+
+.asset-name h4 {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: var(--text-primary);
+}
+
+.example-date {
+    font-size: 0.875rem;
+    color: var(--text-secondary);
+    font-weight: 600;
+}
+
+.example-body {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.trade-info {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+}
+
+.trade-item {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.trade-label {
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    color: var(--text-secondary);
+    font-weight: 600;
+}
+
+.trade-value {
+    font-size: 1.125rem;
+    font-weight: 700;
+    color: var(--text-primary);
+}
+
+.trade-result {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 1.25rem;
+    border-radius: 12px;
+    background: linear-gradient(135deg, #e8f5e9 0%, #c8e6c9 100%);
+    border: 2px solid #4caf50;
+}
+
+.trade-result.success .result-icon {
+    width: 40px;
+    height: 40px;
+    background: #4caf50;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 1.5rem;
+    font-weight: bold;
+    flex-shrink: 0;
+}
+
+.result-text {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+}
+
+.result-label {
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    color: #2e7d32;
+    font-weight: 600;
+}
+
+.result-value {
+    font-size: 1.75rem;
+    font-weight: 800;
+    color: #1b5e20;
+}
+
+.examples-disclaimer {
+    text-align: center;
+    font-size: 0.75rem;
+    color: var(--text-secondary);
+    font-style: italic;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
 /* Subscription Section */
 .subscription {
     background: var(--bg-card);
@@ -305,6 +459,14 @@ footer {
     .benefits-grid {
         grid-template-columns: repeat(3, 1fr);
         gap: 2rem;
+    }
+
+    .examples-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .examples h3 {
+        font-size: 2.5rem;
     }
 
     .subscription {
