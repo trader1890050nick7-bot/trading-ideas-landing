@@ -289,6 +289,91 @@ main {
     margin: 0 auto;
 }
 
+/* Chart Details (Expandable) */
+.chart-details {
+    margin-top: 1rem;
+    border: 2px solid #e0e0e0;
+    border-radius: 12px;
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+
+.chart-details[open] {
+    border-color: var(--accent-orange);
+}
+
+.chart-toggle {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 1rem 1.25rem;
+    background: #f8f8f8;
+    cursor: pointer;
+    list-style: none;
+    user-select: none;
+    transition: all 0.3s ease;
+}
+
+.chart-toggle::-webkit-details-marker {
+    display: none;
+}
+
+.chart-toggle:hover {
+    background: #f0f0f0;
+}
+
+.chart-details[open] .chart-toggle {
+    background: #fff5f2;
+    border-bottom: 2px solid #e0e0e0;
+}
+
+.toggle-icon {
+    font-size: 1.25rem;
+    line-height: 1;
+}
+
+.toggle-text {
+    flex: 1;
+    font-size: 0.9375rem;
+    font-weight: 600;
+    color: var(--text-primary);
+}
+
+.toggle-arrow {
+    font-size: 0.875rem;
+    color: var(--text-secondary);
+    transition: transform 0.3s ease;
+}
+
+.chart-details[open] .toggle-arrow {
+    transform: rotate(180deg);
+}
+
+.chart-container {
+    padding: 1.5rem;
+    background: white;
+    animation: slideDown 0.3s ease-out;
+}
+
+.trade-chart {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    display: block;
+}
+
+@keyframes slideDown {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
 /* Subscription Section */
 .subscription {
     background: var(--bg-card);
