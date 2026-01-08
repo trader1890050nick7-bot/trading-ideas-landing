@@ -1,17 +1,28 @@
 {
   "name": "trading-ideas-landing",
   "version": "1.0.0",
-  "description": "",
+  "description": "Landing page for weekly trading ideas and signals subscription",
   "main": "server.js",
   "scripts": {
     "start": "node server.js",
     "dev": "node server.js",
+    "build": "echo 'No build step required for this project'",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "keywords": [],
+  "keywords": [
+    "trading",
+    "landing-page",
+    "email-subscription",
+    "express",
+    "nodejs"
+  ],
   "author": "",
   "license": "ISC",
   "type": "commonjs",
+  "engines": {
+    "node": ">=14.0.0",
+    "npm": ">=6.0.0"
+  },
   "dependencies": {
     "cors": "^2.8.5",
     "express": "^5.2.1"
