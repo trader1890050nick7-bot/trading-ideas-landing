@@ -61,7 +61,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
         try {
             // Отправляем данные на сервер
-            const response = await fetch('http://localhost:3000/subscribe', {
+            const response = await fetch('/subscribe', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'
@@ -82,7 +82,7 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         } catch (error) {
             console.error('Ошибка при отправке:', error);
-            showMessage('Ошибка подключения к серверу. Проверьте, что сервер запущен', 'error');
+            showMessage('Ошибка подключения к серверу. Попробуйте позже', 'error');
         } finally {
             // Разблокируем кнопку
             submitButton.disabled = false;
