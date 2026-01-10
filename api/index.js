@@ -31,7 +31,7 @@ async function saveEmails(emails) {
 }
 
 // POST endpoint для подписки
-app.post('/subscribe', async (req, res) => {
+app.post('/', async (req, res) => {
     try {
         const { email } = req.body;
 

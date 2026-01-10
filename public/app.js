@@ -61,7 +61,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
         try {
             // Отправляем данные на сервер
-            const response = await fetch('/subscribe', {
+            const response = await fetch('/api', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'
