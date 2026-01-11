@@ -1,8 +1,12 @@
 // Локальный сервер для разработки
 // Эмулирует Vercel serverless окружение
 
-const express = require('express');
-const path = require('path');
+import express from 'express';
+import path from 'path';
+import { fileURLToPath } from 'url';
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
 
 const app = express();
 const PORT = process.env.PORT || 3000;
@@ -28,13 +32,14 @@ app.post('/api', async (req, res) => {
     });
   }
 
-  // Log subscription
+  // Log subscription (в локальной разработке без Mailchimp)
   console.log('New subscription:', email);
+  console.log('NOTE: Mailchimp integration is disabled in local development');
 
   // Success response
   return res.status(200).json({
     success: true,
-    message: 'Спасибо за подписку! Мы свяжемся с вами.'
+    message: 'Спасибо за подписку! Проверьте email для подтверждения.'
   });
 });
 
@@ -49,4 +54,5 @@ app.options('/api', (req, res) => {
 app.listen(PORT, () => {
   console.log(`Локальный сервер запущен на http://localhost:${PORT}`);
   console.log(`Для продакшена используйте: vercel --prod`);
+  console.log(`NOTE: Mailchimp API не используется локально`);
 });

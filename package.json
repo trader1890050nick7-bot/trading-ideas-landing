@@ -18,12 +18,13 @@
   ],
   "author": "",
   "license": "ISC",
-  "type": "commonjs",
+  "type": "module",
   "engines": {
     "node": ">=14.0.0",
     "npm": ">=6.0.0"
   },
   "dependencies": {
+    "@mailchimp/mailchimp_marketing": "^3.0.80",
     "cors": "^2.8.5",
     "express": "^5.2.1"
   }
